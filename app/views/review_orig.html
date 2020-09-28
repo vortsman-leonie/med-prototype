@@ -1,0 +1,352 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<h2>
+
+  MANUFACTURER’S DECLARATION
+</h2>
+<P>
+  To Whom It May Concern,
+</p>
+<p>
+  I hereby declare that the goods travelling on Air Waybill Number X: are:
+  </p>
+
+{% if data['sample'] == 'antibody-monoclonal' or 'antibody-polyclonal' or 'cell-line' or 'cell-lysates' or 'cell-pellets' or 'cell-blood' or 'cell-blood-infected' or 'cell-bone-marrow' or 'cell-cancer' or 'cell-fixed' or 'cell-immune' or 'cell-stem' or 'cell-tumour' or 'dna-genomic' or 'dna-plasmid' or 'fibroblast-cell-line' or 'microorganism' or 'oligonucleotide' or 'parasite-strain' or 'pcr-product' or 'protein-lysate' or 'protein-sample' or 'rna-sample'
+and data['origin'] == 'bacterium-escherichia-coli' or 'bacterium-giardia-lamblia-duodenalis' or 'insect-drosophilia-melanogaster' or 'insect-sf21' or 'malaria' or 'toxoplasma' %}
+<H2>1ST!</H2>
+<p>
+The material was derived only from Purified Protein-Animal Origin that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+</p>
+<p>
+The material was derived only from Purified Protein-Animal Origin that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
+</p>
+<p>
+The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
+</p>
+<p>
+The material is non-hazardous, non-infectious.
+</p>
+{% endif %}
+
+
+{% if data['sample'] == 'antibody-monoclonal' or 'antibody-polyclonal' or 'blood-sample' or 'bone-sample' or 'cell-line' or 'cell-lysates' or 'cell-pellets' or 'cell-blood' or 'cell-blood-infected' or 'cell-bone-marrow' or 'cell-cancer' or 'cell-fixed' or 'cell-immune' or 'cell-stem' or 'cell-tumour' or 'dna-genomic' or 'dna-plasmid' or 'embryo-fixed' or 'faecal-sample' or 'fibroblast-cell-line' or 'microorganism' or 'oligonucleotide' or 'parasite-strain' or 'pcr-product' or 'plasma' or 'protein-lysates' or 'protein-sample' or 'rna-sample' or 'saliva-sample' or 'sera-serum' or 'sperm' or 'tissue-sample' or 'tissue-sample-fixed' or 'urine-sample' and data['origin'] == 'chinese-hamster-ovary-cho' or 'goat' or 'malaria' or 'mouse' or 'rabbit' or 'rat'%}
+<H2> 2ND!</H2>
+<p>
+B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+</p>
+<p>
+	The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
+</p>
+<p>
+The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
+</p>	
+<p>
+The material is non-hazardous, non-infectious.
+</p>	
+"
+
+{% endif %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Review and submit</h1>
+      <h1 class="govuk-heading-l">Sender of goods</h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['name'] }}          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Organisation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company'] }}<br />
+                  </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+Address          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}<br />
+            {{ data['address-city'] }}<br />
+            {{ data['address-state'] }}<br />
+            {{ data['address-country'] }}<br />
+
+    </p>          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['telephone-number-1'] }}<br />
+            {{ data['email'] }}<br />
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h1 class="govuk-heading-l">Receiver of goods</h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['name'] }}          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Organisation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company'] }}<br />
+                  </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+Address          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}<br />
+            {{ data['address-city'] }}<br />
+            {{ data['address-state'] }}<br />
+            {{ data['address-country'] }}<br />
+
+    </p>          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Contact details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['telephone-number-1'] }}<br />
+            {{ data['email'] }}<br />
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h1 class="govuk-heading-l">Courier & billing details</h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Courier
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['name'] }}          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email courier
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company'] }}<br />
+                  </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+Bill transport to          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-line-1'] }}<br />
+            Account number:   {{ data['transport-fees-conditional'] }}
+
+
+    </p>          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Bill other fees to   <br />
+          </dt>
+
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['telephone-number-1'] }}<br />
+            Account number:
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+<table>
+  <tr>
+    <td valign="top">
+  <h2 class="govuk-heading-m">Consigner</h2>
+<p>
+  Mike Laurence<br />
+The Walter & Eliza Hall Institute of Medical Research<br />
+1G Royal Parade<br />
+Parkville Victoria<br />
+3052 Australia
+</p>
+
+</td>
+
+<td valign="top">
+  <h2 class="govuk-heading-m">Consignee</h2>
+
+<p>
+          {{ data['name'] }}<br />
+        {{ data['company'] }}<br >
+        {{ data['address-line-1'] }}<br />
+        {{ data['address-city'] }}<br />
+        {{ data['address-state'] }}<br />
+        {{ data['address-country'] }}<br />
+        {{ data['telephone-number-1'] }}<br />
+        {{ data['email'] }}<br />
+</p>
+  </td>
+</tr>
+
+  </table>
+
+
+
+
+        <h2 class="govuk-heading-m">Country of export</h2>
+        <p>Australia</p>
+        <h2 class="govuk-heading-m">Country of manufacture</h2>
+        <p>Australia</p>
+        <h2 class="govuk-heading-m">Country of ultimate destination</h2>
+        <p>  {{ data['address-country'] }}</p>
+
+
+        <table>
+          <tr>
+            <td valign="top">
+          <h2 class="govuk-heading-m">Number of Packs</h2>
+        <p>
+      1
+        </p>
+
+        </td>
+
+        <td valign="top">
+          <h2 class="govuk-heading-m">Type of Packaging</h2>
+
+        <p>
+          IATA Transport Box<br />
+  Packed in accordance with UN3373 Biological Substances, Category B instructions
+  Packed in accordance with Exempt/Category C instructions
+        </p>
+          </td>
+          <td valign="top">
+            <h2 class="govuk-heading-m">Description</h2>
+
+          <p>
+            {{ data['sample'] }}<br />
+          {{ data['origin'] }}<br >
+          {{ data['method-of-production'] }}<br />
+          {{ data['number-of-samples'] }}<br />
+          {{ data['origin'] }}<br />
+          {{ data['volume-per-sample'] }}<br />
+          {{ data['unit'] }}<br />
+
+
+
+          </p>
+            </td>
+        </tr>
+
+          </table>
+
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/confirmation" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+
+    {% block stepByStepNav %}
+    {% include "includes/step-by-step-nav.html" %}
+    {% endblock %}
+    </div>
+
+  </div>
+  {% endblock %}

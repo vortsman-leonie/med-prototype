@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/description-of-goods" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Permits
+              </h1>
+            </legend>
+
+            <span id="changed-name-hint" class="govuk-hint">
+
+            </span>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="file-upload-1">
+                Please upload your import permit
+              </label>
+
+
+              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+</div>
+
+             <button class="govuk-button" data-module="govuk-button">
+          Upload
+        </button>
+
+
+
+{% endblock %}

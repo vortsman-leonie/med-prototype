@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Billing details
+        </h1>
+      </legend>
+      <form class="form" action="/billing-fees" method="post">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Cost of transport
+                </h1>
+              </legend>
+              <span id="how-contacted-conditional-hint" class="govuk-hint">
+                Who will be charged for the cost of transport?
+              </span>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="transport-fees-conditional" name="transport-fees" type="radio" value="text" data-aria-controls="conditional-transport-fees-conditional">
+                  <label class="govuk-label govuk-radios__label" for="conditional-transport-fees-conditional">
+                    Sender
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transport-fees-conditional">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="transport-fees-account-number">
+                      Account number
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="transport-sender-account-number" name="sender-account-number" type="number" spellcheck="false">
+                  </div>
+
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="transport-fees-conditional-2" name="transport-fees" type="radio" value="text" data-aria-controls="conditional-transport-fees-conditional-2">
+                  <label class="govuk-label govuk-radios__label" for="conditional-transport-fees-conditional-2">
+                    Receiver
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-transport-fees-conditional-2">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="transport-fees-account-number">
+                        Account number
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="receiver-account-number" name="receiver-account-number" type="tel">
+                  </div>
+
+                </div>
+
+
+                </div>
+
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+    </div>
+    {% block stepByStepNav %}
+    {% include "includes/step-by-step-nav.html" %}
+    {% endblock %}
+  </div>
+  {% endblock %}

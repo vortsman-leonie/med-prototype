@@ -1,0 +1,268 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/description-of-goods-non-infectious" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Description of goods
+              </h1>          <p><strong>
+                          Infectious
+          </strong></p>
+            </legend>
+
+
+
+
+
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Sample
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="antibody-monoclonal" selected>Antibody (Monoclonal)</option>
+          <option value="antibody-polyclonal">Antibody (Polyclonal)</option>
+          <option value="cell-line" name="cell-line" id="cell-line" value="{{ data['cell-line'] }}">Cell line</option>
+          <option value="cell-pellets">Cell pellets</option>
+          <option value="cell-blood">Cell (Blood)</option>
+          <option value="cell-blood-infected">Cell (Blood, infected)</option>
+          <option value="cell-bone-marrow">Cell (Bone marrow)</option>
+          <option value="cell-cancer">Cell (Cancer)</option>
+          <option value="cell-fixed">Cell (Fixed)</option>
+          <option value="cell-immune">Cell (Immune)</option>
+          <option value="cell-stem">Cell (Stem)</option>
+          <option value="cell-tumour">Cell (Tumour)</option>
+          <option value="dna-plasmid">DNA (Plasmid)</option>
+          <option value="fibroblast-cell-line">Fibroblast cell line</option>
+          <option value="microorganism">Microorganism</option>
+          <option value="oligonucleotide">Oligonucleotide</option>
+          <option value="oligonucleotide">Parasite strain</option>
+          <option value="pcr-product">PCR product</option>
+          <option value="protein-lysates">Protein lysates</option>
+          <option value="protein-sample">Protein sample</option>
+          <option value="rna-sample">RNA sample</option>
+        </select>
+      </div>
+
+
+
+          </fieldset>
+        </div>
+
+
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Origin
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="bacterium-escherichia-coli" selected>Bacterium (Escherichia coli)</option>
+            <option value="bacterium-giardia-lamblia-duodenalis">Bacterium (Giardia lamblia (Duodenalis))</option>
+            <option value="chinese-hamster-ovary-cho">Chinese Hamster Ovary (CHO)</option>
+            <option value="goat">Goat</option>
+            <option value="insect-drosophilia-melanogaster">Insect (Drosophilia melanogaster)</option>
+            <option value="insect-sf21">Insect (Sf21)</option>
+            <option value="malaria">Malaria</option>
+            <option value="mouse">Mouse</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="rat">Rat</option>
+            <option value="toxoplasma">Rat</option>
+          </select>
+        </div>
+
+`
+
+
+                            {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+                            {{ govukSelect({
+                              id: "method-of-production",
+                              name: "method-of-production",
+                              label: {
+                                text: "Method of Production"
+                              },
+                              items: [
+                                {
+                                  value: "isolated-from",
+                                  text: "Isolated from",
+                                  selected: true
+                                },
+                                {
+                                  value: "derived-from",
+                                  text: "Derived from"
+                                },
+                                {
+                                  value: "expressed-in",
+                                  text: "Expressed in"
+                                },
+                                {
+                                  value: "expressed-in-insect-cells",
+                                  text: "Expressed in insect Cells"
+                                },
+                                {
+                                  value: "expressed-in-mouse-cells",
+                                  text: "Expressed in mouse cells"
+                                },
+                                {
+                                  value: "expressed-in-human-cells",
+                                  text: "Expressed in human Cells"
+                                },
+                                {
+                                  value: "expressed-in-yeast-cells",
+                                  text: "Expressed in yest cells"
+                                },
+                                {
+                                  value: "expressed-in-bacteria",
+                                  text: "Expressed in bacteria"
+                                }
+                              ]
+                            }) }}
+                
+                
+
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="event-name">
+                                Number of samples
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="dob-day" name="dob-day" type="number" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+      
+                            <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        
+                                <div class="govuk-date-input" id="passport-issued">
+                              
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label govuk-date-input__label" for="volume-per-sample" type="number" pattern="[0-9]*" inputmode="numeric">
+                                        Volume per sample
+                                      </label>
+                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="volume-per-sample" name="volume-per-sample" type="number" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+
+
+                                
+
+                                  <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label" for="unit">
+                                        Unit
+                                      </label>
+                                      <select class="govuk-select" id="unit" name="unit">
+                                        <option value="ml" selected>ml</option>
+                                        <option value="mg">mg</option>
+                                      </select>
+                                    </div>
+  
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+
+
+
+
+                            <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <h1 class="govuk-fieldset__heading">
+                                  Recombinant?
+                                </h1>
+                              </legend>
+                              <div class="govuk-radios govuk-radios--small">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="recombinant" name="recombinant-true" type="radio" value="month">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                                    Yes
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="recombinant" name="recombinant-true" type="radio" value="month">
+
+                                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                    No
+                                  </label>
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+
+
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h1 class="govuk-fieldset__heading">
+                      Dimensions
+                      </h1>
+                      </legend>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dimensions">
+
+
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dimensions-height">
+            Height (cm)
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dimensions-height" name="dimensions-height" type="number" pattern="[0-9]*" inputmode="numeric" maxlength="3">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dimensions-width">
+            Width (cm)
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dimensions-width" name="dimensions-width" type="number" pattern="[0-9]*" inputmode="numeric" maxlength="3">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dimensions-depth">
+            Depth (cm)
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dimensions-depth" name="dimensions-depth" type="number" pattern="[0-9]*" inputmode="numeric" maxlength="3">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>                                        </fieldset>
+
+<div class="govuk-form-group">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+  <h1 class="govuk-fieldset__heading">
+  Additional notes
+  </h1>
+  </legend>
+  <span id="more-detail-hint" class="govuk-hint">
+Product notes, special requests, or anything else not entered above.  </span>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+</div>
+{% block stepByStepNav %}
+{% include "includes/step-by-step-nav.html" %}
+{% endblock %}
+</div>
+{% endblock %}

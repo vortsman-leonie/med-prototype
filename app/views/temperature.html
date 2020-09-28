@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/receiver">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/permits" method="post">
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Temperature </h1>
+          </legend>
+
+          <span id="how-contacted-conditional-hint" class="govuk-hint">
+At what temperature does your consignment need to be kept?
+
+          </span>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature" name="temperature" type="radio" value="no-cooling-required" aria-describedby="temperature-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature">
+                No cooling required </label>
+              <span id="temperature-group-2-item-hint" class="govuk-hint govuk-radios__hint">
+                Shipped in box/envelope </span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature-2" name="temperature" type="radio" value="controlled-room-temperature" aria-describedby="temperature-hint-2-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature-2">
+                Controlled room temperature</label>
+              <span id="temperature-group-2-item-hint" class="govuk-hint govuk-radios__hint">
+                15 to 25 °C - Shipped in Crēdo Cube&trade; </span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature-3" name="temperature" type="radio" value="refrigerated-gel-packs" aria-describedby="temperature-hint-3-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature-3">
+                Refrigerated gel packs </label>
+              <span id="temperature-group-3-item-hint" class="govuk-hint govuk-radios__hint">
+                2 to 8 °C  - Shipped in thermal container</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature-4" name="temperature" type="radio" value="controlled-refrigerated" aria-describedby="temperature-hint-4-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature-4">
+                Controlled refrigerated
+              </label>
+              <span id="temperature-group-4-item-hint" class="govuk-hint govuk-radios__hint">
+                2 – 8 °C - Shipped in Crēdo Cube&trade; </span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature-4" name="temperature" type="radio" value="controlled-frozen" aria-describedby="temperature-hint-4-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature-4">
+                Controlled frozen
+              </label>
+              <span id="temperature-group-4-item-hint" class="govuk-hint govuk-radios__hint">
+                -15 to -25 °C &ndash; Shipped in Crēdo Cube&trade;</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature-4" name="temperature" type="radio" value="dry-ice" aria-describedby="temperature-hint-4-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature-4">
+                Dry ice
+              </label>
+              <span id="temperature-group-4-item-hint" class="govuk-hint govuk-radios__hint">
+                -78.5 °C - Shipped in thermal container</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="temperature-4" name="temperature" type="radio" value="liquid-n2o" aria-describedby="temperature-hint-4-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="temperature-4">
+                Liquid N20
+              </label>
+              <span id="temperature-group-4-item-hint" class="govuk-hint govuk-radios__hint">
+                -210°C - Shipped in dry shipper</span>
+            </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+  {% block stepByStepNav %}
+  {% include "includes/step-by-step-nav.html" %}
+  {% endblock %}
+</div>
+{% endblock %}

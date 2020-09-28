@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+{{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "When was your passport issued?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "For example, 12 11 2007"
+  }
+}) }}
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Receiver of goods
+        </h1>
+      </legend>
+      <form class="form" action="/temperature" method="post">
+
+
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Name <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="name" name="name" type="text" autocomplete="name">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="company">
+            Company <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="company" name="company" type="text" autocomplete="company">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Address <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+        </div>
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            City
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-city" name="address-city" type="text" autocomplete="address-city">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="state">
+            State
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="state" name="address-state" type="text" autocomplete="address-state">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-country">
+            Country
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-country" name="address-country" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="telephone-number">
+            Phone 1
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="telephone-number-1" name="telephone-number-1" type="tel" autocomplete="tel">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Email address
+          </label>
+          <span id="email-hint" class="govuk-hint">
+            We’ll only use this to send you a receipt
+          </span>
+          <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+        </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+    </fieldset>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/infectious-answer" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Description of goods
+              </h1>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="infectious-yes" name="infectious" type="radio" value="true">
+                <label class="govuk-label govuk-radios__label" for="infectious-yes">
+                  Infectious specimens
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="infectious-no" name="infectious" type="radio" value="false">
+                <label class="govuk-label govuk-radios__label" for="infectious-no">
+                  Not infectious or not known to be infectious specimens
+
+                </label>
+              </div>
+            </div>
+            </fieldset>
+          </div>
+
+
+
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+      </div>
+      {% block stepByStepNav %}
+      {% include "includes/step-by-step-nav.html" %}
+      {% endblock %}
+    </div>
+    {% endblock %}

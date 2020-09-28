@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Courier details
+        </h1>
+      </legend>
+      <form class="form" action="/courier-email" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Select a courier
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="courier-select-1" name="courier-select" type="radio" value="marken" {{ checked("courier-select", "marken") }}>
+
+                <label class="govuk-label govuk-radios__label" for="courier-select">
+                  Marken
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="courier-select-2" name="courier-select" type="radio" value="world-courier" {{ checked("courier-select", "world-courier") }}>
+                <label class="govuk-label govuk-radios__label" for="courier-select-2">
+                  World Courier
+                </label>
+              </div>
+
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="courier-select-3" name="courier-select" type="radio" value="fedex" {{ checked("courier-select", "fedex") }}>
+                <label class="govuk-label govuk-radios__label" for="courier-select-3">
+                  Fedex
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+  </div>
+  {% block stepByStepNav %}
+  {% include "includes/step-by-step-nav.html" %}
+  {% endblock %}
+</div>
+{% endblock %}
