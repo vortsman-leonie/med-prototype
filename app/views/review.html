@@ -14,16 +14,14 @@
   MANUFACTURER’S DECLARATION
 </h2>
 <P>
-  To Whom It May Concern, testing
+  To Whom It May Concern, 
 </p>
 <p>
   I hereby declare that the goods travelling on Air Waybill Number X: are:</p>
 
-<p>TST MSG  Before 1st if Data sample = {{data.sample }} and Data Origin = {{ data.origin }} </p> 
-
 {% if ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and ((data.origin == 'bacterium-escherichia-coli') or (data.origin =='bacterium-giardia-lamblia-duodenalis') or (data.origin == 'insect-drosophilia-melanogaster') or (data.origin == 'insect-sf21') or (data.origin == 'malaria') or (data.origin == 'toxoplasma'))  %}
 
-      <H2>TST MSG  Sample from 1st set of options</H2>
+      <H2>1ST!</H2>
 
           <p>
           The material was derived only from Purified Protein-Animal Origin that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
@@ -39,9 +37,9 @@
           </p>
 
       {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'blood-sample') or (data.sample == 'bone-sample') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'embryo-fixed') or (data.sample == 'faecal-sample') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or data.sample == ('pcr-product') or (data.sample == 'plasma') or (data.sample == 'protein-lysates') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample') or (data.sample == 'saliva-sample') or (data.sample == 'sera-serum') or (data.sample == 'sperm') or (data.sample == 'tissue-sample') or (data.sample == 'tissue-sample-fixed') or (data.sample == 'urine-sample')) and ((data.origin == 'chinese-hamster-ovary-cho') or (data.origin == 'goat') or (data.origin == 'malaria') or (data.origin == 'mouse') or (data.origin == 'rabbit') or (data.origin == 'rat'))  %}
-          <h2>TST MSG  Sample from 2nd set of conditions met </h2>
+          <h2>2ND!</h2>
           <p>
-            The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+            B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
             </p>
             <p>
               The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
@@ -53,9 +51,9 @@
             The material is non-hazardous, non-infectious.
             </p>
          {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'human') %}
-          <h2>TST from the 3rd set of conditions met </h2>
+          <h2>3RD!</h2>
           <p>
-            The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+            B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
             </p>
             <p>
               The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
@@ -68,7 +66,7 @@
             </p>
         {% elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'blank') %}
           
-            <h2>TST from the 4th set of conditions</h2>
+            <h2>4TH!</h2>
             <p>B. The material was not derived from a facility where work with exotic disease agents affecting livestock or avian species is conducted
             </p>
             <p>The material has not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
@@ -78,7 +76,7 @@
             <p>The material is non-hazardous, non-infectious
             </p>
           {% else %}
-          <p>TST MSG  Neither of the above choices</p>
+          <p>Neither of the correct choices</p>
         {% endif %} 
 
        

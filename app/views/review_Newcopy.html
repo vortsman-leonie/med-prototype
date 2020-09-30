@@ -1,419 +1,97 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check your answers
+Question page
 {% endblock %}
 
+{% block navClass %} receiver {% endblock %}
 {% block beforeContent %}
 <a href="#" onClick=history.back(); class="govuk-back-link">Back</a>
 {% endblock %}
-
 {% block content %}
-<h2>
-
-  MANUFACTURER’S DECLARATION
-</h2>
-<P>
-  To Whom It May Concern, testing
-</p>
-<p>
-  I hereby declare that the goods travelling on Air Waybill Number X: are:</p>
-
-<p>TST MSG  Before 1st if Data sample = {{data.sample }} and Data Origin = {{ data.origin }} </p> 
-
-{% if ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and ((data.origin == 'bacterium-escherichia-coli') or (data.origin =='bacterium-giardia-lamblia-duodenalis') or (data.origin == 'insect-drosophilia-melanogaster') or (data.origin == 'insect-sf21') or (data.origin == 'malaria') or (data.origin == 'toxoplasma'))  %}
-
-      <H2>TST MSG  Sample from 1st set of options</H2>
-
-          <p>
-          The material was derived only from Purified Protein-Animal Origin that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
-          </p>
-          <p>
-          The material was derived only from Purified Protein-Animal Origin that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-          </p>
-          <p>
-          The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-          </p>
-          <p>
-          The material is non-hazardous, non-infectious.
-          </p>
-
-      {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'blood-sample') or (data.sample == 'bone-sample') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'embryo-fixed') or (data.sample == 'faecal-sample') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or data.sample == ('pcr-product') or (data.sample == 'plasma') or (data.sample == 'protein-lysates') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample') or (data.sample == 'saliva-sample') or (data.sample == 'sera-serum') or (data.sample == 'sperm') or (data.sample == 'tissue-sample') or (data.sample == 'tissue-sample-fixed') or (data.sample == 'urine-sample')) and ((data.origin == 'chinese-hamster-ovary-cho') or (data.origin == 'goat') or (data.origin == 'malaria') or (data.origin == 'mouse') or (data.origin == 'rabbit') or (data.origin == 'rat'))  %}
-          <h2>TST MSG  Sample from 2nd set of conditions met </h2>
-          <p>
-            The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
-            </p>
-            <p>
-              The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-            </p>
-            <p>
-            The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-            </p>	
-            <p>
-            The material is non-hazardous, non-infectious.
-            </p>
-         {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'human') %}
-          <h2>TST from the 3rd set of conditions met </h2>
-          <p>
-            The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
-            </p>
-            <p>
-              The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-            </p>
-            <p>
-            The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-            </p>	
-            <p>
-            The material is non-hazardous, non-infectious.
-            </p>
-        {% elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'blank') %}
-          
-            <h2>TST from the 4th set of conditions</h2>
-            <p>B. The material was not derived from a facility where work with exotic disease agents affecting livestock or avian species is conducted
-            </p>
-            <p>The material has not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-            </p>
-            <p>The material does not produce antigens or contain genes of livestock or avian disease agents, or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-            </p>
-            <p>The material is non-hazardous, non-infectious
-            </p>
-          {% else %}
-          <p>TST MSG  Neither of the above choices</p>
-        {% endif %} 
-
-        {%if ((microbial = 'true') and ( recombinant-true = 'no')) %}
-          <h2> microbial - true and recombinant - not true</h2>
-          <p>USA H. 	Guideline 1110: Microbially Produced Materials World H. Blank</p>
-          <p>B. The material has been produced by microbial expression.</p>
-
-        {% elseif ((microbial = 'true') and ( recombinant-true = 'yes')) %}
-           <h2> microbial - true and recombinant - true</h2>
-           <p>USA H. 	Guideline 1114: Recombinant Microbes and Their Products</p>
-           <p>World H. Blank </p>
-           <p>B. The material has been produced by recombinant microbial expression.</p> 
-
-        {% elseif ((microbial = 'false') and ( recombinant-true = 'yes')) %}
-           <h2> microbial - true and recombinant - true</h2>
-           <p>USA H. Guideline 1120: Cell Cultures/Lines, Recombinant Cell Cultures/Lines, and Their Products (for in vitro use)
-           </p> 
-           <p>World H. Blank
-           </p>
-           <p>B. Recombinant but contains no genes and expresses no products of exotic livestock or poultry disease agents.
-           </p>       
-         
-        {% elseif ((microbial = 'false') and ( recombinant-true = 'no')) %}
-           <h2> microbial - false and recombinant - false</h2>
-           <p>USA H. Guideline 1120: Cell Cultures/Lines, Recombinant Cell Cultures/Lines, and Their Products (for in vitro use)
-           </p>
-           <p>World H. Blank
-           </p>
-           <p>B. The material is not recombinant.
-           </p>
-
-        {% else %}    
-            <h2>recombinant neither true nor false</h2>
-        {% endif %}
-
-        {% if invitro = true %}
-        <h2>TST msg INVITRO = TRUE</h2>
-        <p>B. The material is for in vitro use only.
-        </p>
-        <p>The material is to be used in research only.
-        </p>
-
-
-
-
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Review and submit</h1>
-      <h1 class="govuk-heading-l">Sender of goods</h1>
 
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['name'] }}          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Receiver of goods
+        </h1>
+      </legend>
+      <form class="form" action="/courier-select" method="post">
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Name <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="name" name="name" type="text" autocomplete="name" value="{{ data['name'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Organisation
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['company'] }}<br />
-                  </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="company">
+            Company <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="company" name="company" type="text" autocomplete="company" value="{{ data['company'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-Address          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}<br />
-            {{ data['address-city'] }}<br />
-            {{ data['address-state'] }}<br />
-            {{ data['address-country'] }}<br />
 
-    </p>          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact information</span>
-            </a>
-          </dd>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Address <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" value="{{ data['address-line-1'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Contact details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['telephone-number-1'] }}<br />
-            {{ data['email'] }}<br />
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            City
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-city" name="address-city" type="text" autocomplete="address-city" value="{{ data['address-city'] }}">
         </div>
-      </dl>
-
-      <h1 class="govuk-heading-l">Receiver of goods</h1>
-
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['name'] }}          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="state">
+            State
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="state" name="address-state" type="text" autocomplete="address-state" value="{{ data['address-state'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Organisation
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['company'] }}<br />
-                  </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-country">
+            Country
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-country" name="address-country" type="text" value="{{ data['address-country'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-Address          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}<br />
-            {{ data['address-city'] }}<br />
-            {{ data['address-state'] }}<br />
-            {{ data['address-country'] }}<br />
 
-    </p>          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact information</span>
-            </a>
-          </dd>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" value="{{ data['address-postcode'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Contact details
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['telephone-number-1'] }}<br />
-            {{ data['email'] }}<br />
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="telephone-number">
+            Telephone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="telephone-number-1" name="telephone-number-1" type="tel" autocomplete="tel" value="{{ data['telephone-number-1'] }}">
         </div>
-      </dl>
 
-      <h1 class="govuk-heading-l">Courier and billing details</h1>
-
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Courier
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['name'] }}          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Email address
+          </label>
+          <span id="email-hint" class="govuk-hint">
+            We’ll only use this to send you a receipt
+          </span>
+          <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false" value="{{ data['email'] }}">
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email courier
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['company'] }}<br />
-                  </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-Bill transport to          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}<br />
-            Account number:   {{ data['transport-fees-conditional'] }}
-
-
-    </p>          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact information</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Bill other fees to   <br />
-          </dt>
-
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['telephone-number-1'] }}<br />
-            Account number:
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-
-<table>
-  <tr>
-    <td valign="top">
-  <h2 class="govuk-heading-m">Consigner</h2>
-<p>
-  Mike Laurence<br />
-The Walter and Eliza Hall Institute of Medical Research<br />
-1G Royal Parade<br />
-Parkville Victoria<br />
-3052 Australia
-</p>
-
-</td>
-
-<td valign="top">
-  <h2 class="govuk-heading-m">Consignee</h2>
-
-<p>
-          {{ data['name'] }}<br />
-        {{ data['company'] }}<br >
-        {{ data['address-line-1'] }}<br />
-        {{ data['address-city'] }}<br />
-        {{ data['address-state'] }}<br />
-        {{ data['address-country'] }}<br />
-        {{ data['telephone-number-1'] }}<br />
-        {{ data['email'] }}<br />
-</p>
-  </td>
-</tr>
-
-  </table>
-
-
-
-
-        <h2 class="govuk-heading-m">Country of export</h2>
-        <p>Australia</p>
-        <h2 class="govuk-heading-m">Country of manufacture</h2>
-        <p>Australia</p>
-        <h2 class="govuk-heading-m">Country of ultimate destination</h2>
-        <p>  {{ data['address-country'] }}</p>
-
-
-        <table>
-          <tr>
-            <td valign="top">
-          <h2 class="govuk-heading-m">Number of Packs</h2>
-        <p>
-      1
-        </p>
-
-        </td>
-
-        <td valign="top">
-          <h2 class="govuk-heading-m">Type of Packaging</h2>
-
-        <p>
-          IATA Transport Box<br />
-  Packed in accordance with UN3373 Biological Substances, Category B instructions
-  Packed in accordance with Exempt/Category C instructions
-        </p>
-          </td>
-          <td valign="top">
-            <h2 class="govuk-heading-m">Description</h2>
-
-          <p>
-            {{ data['sample'] }}<br />
-          {{ data['origin'] }}<br >
-          {{ data['method-of-production'] }}<br />
-          {{ data['number-of-samples'] }}<br />
-          {{ data['origin'] }}<br />
-          {{ data['volume-per-sample'] }}<br />
-          {{ data['unit'] }}<br />
-
-
-
-          </p>
-            </td>
-        </tr>
-
-          </table>
-
-
-      <h2 class="govuk-heading-m">Now send your application</h2>
-
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-
-      <form action="/confirmation" method="post" novalidate>
-
-        <input type="hidden" name="answers-checked" value="true">
-
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Accept and send
-        </button>
-
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
-
     </div>
-
     {% block stepByStepNav %}
     {% include "includes/step-by-step-nav.html" %}
     {% endblock %}
-    </div>
-
   </div>
   {% endblock %}
