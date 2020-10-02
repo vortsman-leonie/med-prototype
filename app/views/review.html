@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Check your answers
@@ -9,77 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<h2>
 
-  MANUFACTURER’S DECLARATION
-</h2>
-<P>
-  To Whom It May Concern, 
-</p>
-<p>
-  I hereby declare that the goods travelling on Air Waybill Number X: are:</p>
-
-{% if ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and ((data.origin == 'bacterium-escherichia-coli') or (data.origin =='bacterium-giardia-lamblia-duodenalis') or (data.origin == 'insect-drosophilia-melanogaster') or (data.origin == 'insect-sf21') or (data.origin == 'malaria') or (data.origin == 'toxoplasma'))  %}
-
-      <H2>1ST!</H2>
-
-          <p>
-          The material was derived only from Purified Protein-Animal Origin that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
-          </p>
-          <p>
-          The material was derived only from Purified Protein-Animal Origin that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-          </p>
-          <p>
-          The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-          </p>
-          <p>
-          The material is non-hazardous, non-infectious.
-          </p>
-
-      {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'blood-sample') or (data.sample == 'bone-sample') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'embryo-fixed') or (data.sample == 'faecal-sample') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or data.sample == ('pcr-product') or (data.sample == 'plasma') or (data.sample == 'protein-lysates') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample') or (data.sample == 'saliva-sample') or (data.sample == 'sera-serum') or (data.sample == 'sperm') or (data.sample == 'tissue-sample') or (data.sample == 'tissue-sample-fixed') or (data.sample == 'urine-sample')) and ((data.origin == 'chinese-hamster-ovary-cho') or (data.origin == 'goat') or (data.origin == 'malaria') or (data.origin == 'mouse') or (data.origin == 'rabbit') or (data.origin == 'rat'))  %}
-          <h2>2ND!</h2>
-          <p>
-            B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
-            </p>
-            <p>
-              The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-            </p>
-            <p>
-            The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-            </p>	
-            <p>
-            The material is non-hazardous, non-infectious.
-            </p>
-         {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'human') %}
-          <h2>3RD!</h2>
-          <p>
-            B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
-            </p>
-            <p>
-              The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-            </p>
-            <p>
-            The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-            </p>	
-            <p>
-            The material is non-hazardous, non-infectious.
-            </p>
-        {% elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'blank') %}
-          
-            <h2>4TH!</h2>
-            <p>B. The material was not derived from a facility where work with exotic disease agents affecting livestock or avian species is conducted
-            </p>
-            <p>The material has not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
-            </p>
-            <p>The material does not produce antigens or contain genes of livestock or avian disease agents, or do not produce monoclonal antibodies directed against livestock or avian disease agents.
-            </p>
-            <p>The material is non-hazardous, non-infectious
-            </p>
-          {% else %}
-          <p>Neither of the correct choices</p>
-        {% endif %} 
-
-       
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
@@ -93,7 +23,8 @@
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['name'] }}          </dd>
+            Mike Laurence
+       </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
               Change<span class="govuk-visually-hidden"> name</span>
@@ -105,7 +36,8 @@
             Organisation
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['company'] }}<br />
+WEHI
+         <br />
                   </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -117,10 +49,9 @@
           <dt class="govuk-summary-list__key">
 Address          </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}<br />
-            {{ data['address-city'] }}<br />
-            {{ data['address-state'] }}<br />
-            {{ data['address-country'] }}<br />
+            1G Royal Parade<br />
+            Parkville Victoria<br />
+            3052 Australia
 
     </p>          </dd>
           <dd class="govuk-summary-list__actions">
@@ -134,9 +65,8 @@ Address          </dt>
             Contact details
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['telephone-number-1'] }}<br />
-            {{ data['email'] }}<br />
-          </dd>
+0451442720<br />
+mike@wehi.edu.au          </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
               Change<span class="govuk-visually-hidden"> contact details</span>
@@ -213,10 +143,10 @@ Address          </dt>
             Courier
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['name'] }}          </dd>
+            {{ data['courier-select'] }}          </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> name</span>
+              Change<span class="govuk-visually-hidden"> courier-select</span>
             </a>
           </dd>
         </div>
@@ -237,7 +167,6 @@ Address          </dt>
           <dt class="govuk-summary-list__key">
 Bill transport to          </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}<br />
             Account number:   {{ data['transport-fees-conditional'] }}
 
 
@@ -255,7 +184,6 @@ Bill transport to          </dt>
 
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['telephone-number-1'] }}<br />
             Account number:
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -273,13 +201,15 @@ Bill transport to          </dt>
   <h2 class="govuk-heading-m">Consigner</h2>
 <p>
   Mike Laurence<br />
-The Walter and Eliza Hall Institute of Medical Research<br />
+WEHI<br />
 1G Royal Parade<br />
 Parkville Victoria<br />
 3052 Australia
 </p>
 
 </td>
+<td width="40px">
+  </td>
 
 <td valign="top">
   <h2 class="govuk-heading-m">Consignee</h2>
@@ -348,6 +278,74 @@ Parkville Victoria<br />
         </tr>
 
           </table>
+
+          <h1 class="govuk-heading-l">Manufacturer's declaration</h1>
+
+          <P>
+            To Whom It May Concern,
+          </p>
+          <p>
+            I hereby declare that the goods travelling on Air Waybill Number X are:</p>
+
+          {% if ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and ((data.origin == 'bacterium-escherichia-coli') or (data.origin =='bacterium-giardia-lamblia-duodenalis') or (data.origin == 'insect-drosophilia-melanogaster') or (data.origin == 'insect-sf21') or (data.origin == 'malaria') or (data.origin == 'toxoplasma'))  %}
+
+
+                    <p>
+                    The material was derived only from Purified Protein-Animal Origin that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+                    </p>
+                    <p>
+                    The material was derived only from Purified Protein-Animal Origin that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
+                    </p>
+                    <p>
+                    The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
+                    </p>
+                    <p>
+                    The material is non-hazardous, non-infectious.
+                    </p>
+
+                {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'blood-sample') or (data.sample == 'bone-sample') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample == 'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'embryo-fixed') or (data.sample == 'faecal-sample') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or data.sample == ('pcr-product') or (data.sample == 'plasma') or (data.sample == 'protein-lysates') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample') or (data.sample == 'saliva-sample') or (data.sample == 'sera-serum') or (data.sample == 'sperm') or (data.sample == 'tissue-sample') or (data.sample == 'tissue-sample-fixed') or (data.sample == 'urine-sample')) and ((data.origin == 'chinese-hamster-ovary-cho') or (data.origin == 'goat') or (data.origin == 'malaria') or (data.origin == 'mouse') or (data.origin == 'rabbit') or (data.origin == 'rat'))  %}
+                    <p>
+                      B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+                      </p>
+                      <p>
+                        The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
+                      </p>
+                      <p>
+                      The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
+                      </p>
+                      <p>
+                      The material is non-hazardous, non-infectious.
+                      </p>
+                   {%  elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'human') %}
+                    <h2>3RD!</h2>
+                    <p>
+                      B. The material was derived only from laboratory mammals that did not originate from a facility where work with exotic disease agents affecting livestock or avian species is conducted.
+                      </p>
+                      <p>
+                        The material was derived only from laboratory mammals that have not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
+                      </p>
+                      <p>
+                      The material does not produce antigens or contain genes of livestock or avian disease agents or do not produce monoclonal antibodies directed against livestock or avian disease agents.
+                      </p>
+                      <p>
+                      The material is non-hazardous, non-infectious.
+                      </p>
+                  {% elseif ((data.sample == 'antibody-monoclonal') or (data.sample == 'antibody-polyclonal') or (data.sample == 'cell-line') or (data.sample == 'cell-lysates') or (data.sample == 'cell-pellets') or (data.sample == 'cell-blood') or (data.sample ==  'cell-blood-infected') or (data.sample == 'cell-bone-marrow') or (data.sample == 'cell-cancer') or (data.sample == 'cell-fixed') or (data.sample == 'cell-immune') or (data.sample == 'cell-stem') or (data.sample == 'cell-tumour') or (data.sample == 'dna-genomic') or (data.sample == 'dna-plasmid') or (data.sample == 'fibroblast-cell-line') or (data.sample == 'microorganism') or (data.sample == 'oligonucleotide') or (data.sample == 'parasite-strain') or (data.sample == 'pcr-product') or (data.sample =='protein-lysate') or (data.sample == 'protein-sample') or (data.sample == 'rna-sample')) and (data.origin == 'blank') %}
+
+                      <h2>4TH!</h2>
+                      <p>B. The material was not derived from a facility where work with exotic disease agents affecting livestock or avian species is conducted
+                      </p>
+                      <p>The material has not been inoculated with or exposed to any livestock or poultry disease agents’ exotic to the destination country.
+                      </p>
+                      <p>The material does not produce antigens or contain genes of livestock or avian disease agents, or do not produce monoclonal antibodies directed against livestock or avian disease agents.
+                      </p>
+                      <p>The material is non-hazardous, non-infectious
+                      </p>
+                    {% else %}
+                    <p>Neither of the correct choices</p>
+                  {% endif %}
+
+
 
 
       <h2 class="govuk-heading-m">Now send your application</h2>
