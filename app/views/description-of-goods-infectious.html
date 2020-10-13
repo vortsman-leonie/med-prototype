@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Question page
@@ -136,8 +136,8 @@
                                 }
                               ]
                             }) }}
-                
-                
+
+
 
                             <div class="govuk-form-group">
                               <label class="govuk-label" for="event-name">
@@ -145,12 +145,12 @@
                               </label>
                               <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="dob-day" name="dob-day" type="number" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
                             </div>
-      
+
                             <div class="govuk-form-group">
                               <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                        
+
                                 <div class="govuk-date-input" id="passport-issued">
-                              
+
                                   <div class="govuk-date-input__item">
                                     <div class="govuk-form-group">
                                       <label class="govuk-label govuk-date-input__label" for="volume-per-sample" type="number" pattern="[0-9]*" inputmode="numeric">
@@ -159,7 +159,7 @@
                                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="volume-per-sample" name="volume-per-sample" type="number" pattern="[0-9]*" inputmode="numeric">
                                     </div>
                                   </div><!-- govuk-form-group --> 
-                                
+
 
                                   <div class="govuk-date-input__item">
                                     <div class="govuk-form-group">
@@ -170,8 +170,7 @@
                                         <option value="ml" selected>ml</option>
                                         <option value="mg">mg</option>
                                       </select>
-                                    </div><!-- govuk-form-group --> 
-  
+                                    </div><!-- govuk-form-group -->   
                                   </div><!-- govuk-date-input__item --> 
                                 </div><!-- govuk-date-inpu -->
                               </fieldset>

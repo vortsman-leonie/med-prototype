@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
 Question page
@@ -31,14 +31,14 @@ Question page
             </legend>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="courier-select-1" name="courier-select" type="radio" value="marken" {{ checked("courier-select", "marken") }}>
+                <input class="govuk-radios__input" id="courier-select-1" name="courier-select" type="radio" value="marken" {{ checked("courier-select", "Marken") }}>
 
                 <label class="govuk-label govuk-radios__label" for="courier-select">
                   Marken
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="courier-select-2" name="courier-select" type="radio" value="world-courier" {{ checked("courier-select", "world-courier") }}>
+                <input class="govuk-radios__input" id="courier-select-2" name="courier-select" type="radio" value="world-courier" {{ checked("courier-select", "World Courier") }}>
                 <label class="govuk-label govuk-radios__label" for="courier-select-2">
                   World Courier
                 </label>
@@ -47,7 +47,7 @@ Question page
 
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="courier-select-3" name="courier-select" type="radio" value="fedex" {{ checked("courier-select", "fedex") }}>
+                <input class="govuk-radios__input" id="courier-select-3" name="courier-select" type="radio" value="fedex" {{ checked("courier-select", "Fedex") }}>
                 <label class="govuk-label govuk-radios__label" for="courier-select-3">
                   Fedex
                 </label>
