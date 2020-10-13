@@ -1,4 +1,4 @@
-/*
+courier/*
 
 Provide default values for user session data. These are automatically added
 via the `autoStoreData` middleware. Values will only be added to the

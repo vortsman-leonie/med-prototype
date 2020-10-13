@@ -20,85 +20,72 @@
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
                 Description of goods
-              </h1>          <p><strong>
-                          Infectious
-          </strong></p>
+              </h1>          
+              <p><strong>Infectious</strong></p>
             </legend>
 
 
 
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Sample
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="antibody-monoclonal" selected>Antibody (Monoclonal)</option>
+                <option value="antibody-polyclonal">Antibody (Polyclonal)</option>
+                <option value="cell-line" name="cell-line" id="cell-line" value="{{ data['cell-line'] }}">Cell line</option>
+                <option value="cell-pellets">Cell pellets</option>
+                <option value="cell-blood">Cell (Blood)</option>
+                <option value="cell-blood-infected">Cell (Blood, infected)</option>
+                <option value="cell-bone-marrow">Cell (Bone marrow)</option>
+                <option value="cell-cancer">Cell (Cancer)</option>
+                <option value="cell-fixed">Cell (Fixed)</option>
+                <option value="cell-immune">Cell (Immune)</option>
+                <option value="cell-stem">Cell (Stem)</option>
+                <option value="cell-tumour">Cell (Tumour)</option>
+                <option value="dna-plasmid">DNA (Plasmid)</option>
+                <option value="fibroblast-cell-line">Fibroblast cell line</option>
+                <option value="microorganism">Microorganism</option>
+                <option value="oligonucleotide">Oligonucleotide</option>
+                <option value="oligonucleotide">Parasite strain</option>
+                <option value="pcr-product">PCR product</option>
+                <option value="protein-lysates">Protein lysates</option>
+                <option value="protein-sample">Protein sample</option>
+                <option value="rna-sample">RNA sample</option>
+                <option value="plasma">Plasma</option>
+                <option value="saliva-sample">Saliva sample</option>
+                <option value="sera-serum">Sera/serum</option>
+                <option value="tissue-sample">Tissue sample</option>
+                <option value="tissue-sample-fixed">Tissue sample (Fixed)</option>
+                <option value="urine-sample">Urine sample</option>
+                <option value="bone-sample"> Bone sample</option>
+                <option value="blood-sample"> Blood sample</option>
+                <option value="embryo-fixed">Embryo (Fixed)</option>
+                <option value="faecal-sample">Faecal sample</option>
+                <option value="sperm">Sperm</option>
 
-
-
-
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
-          Sample
-        </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="antibody-monoclonal" selected>Antibody (Monoclonal)</option>
-          <option value="antibody-polyclonal">Antibody (Polyclonal)</option>
-          <option value="cell-line" name="cell-line" id="cell-line" value="{{ data['cell-line'] }}">Cell line</option>
-          <option value="cell-pellets">Cell pellets</option>
-          <option value="cell-blood">Cell (Blood)</option>
-          <option value="cell-blood-infected">Cell (Blood, infected)</option>
-          <option value="cell-bone-marrow">Cell (Bone marrow)</option>
-          <option value="cell-cancer">Cell (Cancer)</option>
-          <option value="cell-fixed">Cell (Fixed)</option>
-          <option value="cell-immune">Cell (Immune)</option>
-          <option value="cell-stem">Cell (Stem)</option>
-          <option value="cell-tumour">Cell (Tumour)</option>
-          <option value="dna-plasmid">DNA (Plasmid)</option>
-          <option value="fibroblast-cell-line">Fibroblast cell line</option>
-          <option value="microorganism">Microorganism</option>
-          <option value="oligonucleotide">Oligonucleotide</option>
-          <option value="oligonucleotide">Parasite strain</option>
-          <option value="pcr-product">PCR product</option>
-          <option value="protein-lysates">Protein lysates</option>
-          <option value="protein-sample">Protein sample</option>
-          <option value="rna-sample">RNA sample</option>
-          <option value="plasma">Plasma</option>
-          <option value="saliva-sample">Saliva sample</option>
-          <option value="sera-serum">Sera/serum</option>
-          <option value="tissue-sample">Tissue sample</option>
-          <option value="tissue-sample-fixed">Tissue sample (Fixed)</option>
-          <option value="urine-sample">Urine sample</option>
-          <option value="bone-sample"> Bone sample</option>
-          <option value="blood-sample"> Blood sample</option>
-          <option value="embryo-fixed">Embryo (Fixed)</option>
-          <option value="faecal-sample"> Faecal sample</option>
-          <option value="sperm">Sperm</option>
-
-        </select>
-      </div>
-
-
-
+              </select>
+            </div><!-- govuk-form-group -->
           </fieldset>
         </div>
-
-
-
-
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="sort">
             Origin
           </label>
           <select class="govuk-select" id="sort" name="sort">
-            <option value="bacterium-escherichia-coli" selected>Bacterium (Escherichia coli)</option>
-            <option value="bacterium-giardia-lamblia-duodenalis">Bacterium (Giardia lamblia (Duodenalis))</option>
-            <option value="chinese-hamster-ovary-cho">Chinese Hamster Ovary (CHO)</option>
-            <option value="goat">Goat</option>
-            <option value="insect-drosophilia-melanogaster">Insect (Drosophilia melanogaster)</option>
-            <option value="insect-sf21">Insect (Sf21)</option>
-            <option value="malaria">Malaria</option>
-            <option value="mouse">Mouse</option>
-            <option value="rabbit">Rabbit</option>
-            <option value="rat">Rat</option>
-            <option value="toxoplasma">Toxoplasma</option>
-            <option value="human">Human</option>
+              <option value="bacterium-escherichia-coli" selected>Bacterium (Escherichia coli)</option>
+              <option value="bacterium-giardia-lamblia-duodenalis">Bacterium (Giardia lamblia (Duodenalis))</option>
+              <option value="chinese-hamster-ovary-cho-cricetulus">Chinese Hamster Ovary (CHO (Cricetulus))</option>
+              <option value="goat-capra">Goat (Capra)</option>
+              <option value="insect-drosophilia-melanogaster">Insect (Drosophilia melanogaster)</option>
+              <option value="insect-sf21">Insect (Sf21)</option>
+              <option value="malaria">Malaria</option> 
+              <option value="mouse">Mouse</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="rat">Rat</option>
+              <option value="toxoplasma">Toxoplasma</option>
+              <option value="human">Human</option>
           </select>
         </div>
 
@@ -171,9 +158,7 @@
                                       </label>
                                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="volume-per-sample" name="volume-per-sample" type="number" pattern="[0-9]*" inputmode="numeric">
                                     </div>
-                                  </div>
-
-
+                                  </div><!-- govuk-form-group --> 
                                 
 
                                   <div class="govuk-date-input__item">
@@ -185,10 +170,10 @@
                                         <option value="ml" selected>ml</option>
                                         <option value="mg">mg</option>
                                       </select>
-                                    </div>
+                                    </div><!-- govuk-form-group --> 
   
-                                  </div>
-                                </div>
+                                  </div><!-- govuk-date-input__item --> 
+                                </div><!-- govuk-date-inpu -->
                               </fieldset>
                             </div>
 
